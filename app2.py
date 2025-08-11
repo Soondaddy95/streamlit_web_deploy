@@ -141,13 +141,13 @@ with col2:
             error = st.session_state["error"]
             if error <= 2.94:
                 status = "정상"
-                img_url = "images/green.png"
+                img_url = "green.png"
             elif error <= 4.44:
                 status = "주의"
-                img_url = "images/yellow.png"
+                img_url = "yellow.png"
             else:
                 status = "위험"
-                img_url = "images/red.png"
+                img_url = "red.png"
 #
             with image_placeholder.container():
 
@@ -165,3 +165,4 @@ with col2:
         else:
 
             image_placeholder.write("결과 확인 버튼을 눌러 이미지를 확인하세요.")
+
