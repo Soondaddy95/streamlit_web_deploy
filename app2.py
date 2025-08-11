@@ -32,7 +32,7 @@ textarea {
 }
 """, unsafe_allow_html=True)
 
-data = joblib.load("/Users/kim-yunhwan/Desktop/== 순대디/== 개인작업/== 파이썬/== 1. 개인_프로젝트/스마트팜/regressormodel.pkl")
+data = joblib.load("regressormodel.pkl")
 model = data["model"]
 X_columns = data["X_columns"]
 cat_features = data["cat_features"]
@@ -141,13 +141,13 @@ with col2:
             error = st.session_state["error"]
             if error <= 2.94:
                 status = "정상"
-                img_url = "/Users/kim-yunhwan/Desktop/== 순대디/== 개인작업/== 파이썬/== 1. 개인_프로젝트/스마트팜/images/green.png"
+                img_url = "images/green.png"
             elif error <= 4.44:
                 status = "주의"
-                img_url = "/Users/kim-yunhwan/Desktop/== 순대디/== 개인작업/== 파이썬/== 1. 개인_프로젝트/스마트팜/images/yellow.png"
+                img_url = "images/yellow.png"
             else:
                 status = "위험"
-                img_url = "/Users/kim-yunhwan/Desktop/== 순대디/== 개인작업/== 파이썬/== 1. 개인_프로젝트/스마트팜/images/red.png"
+                img_url = "images/red.png"
 #
             with image_placeholder.container():
 
@@ -163,4 +163,5 @@ with col2:
                     unsafe_allow_html=True
                 )
         else:
+
             image_placeholder.write("결과 확인 버튼을 눌러 이미지를 확인하세요.")
